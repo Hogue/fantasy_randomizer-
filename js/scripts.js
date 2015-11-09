@@ -1,5 +1,7 @@
 var SalaryCap = 60000;
 
+var Roster = [];
+
 var QBs = {
   DrewBrees : 8000,
   MattRyan : 7000,
@@ -12,7 +14,14 @@ var QBs = {
 
 };
 
-var RB = {};
+var RBs = {
+  AdrianPeterson : 9000,
+  ToddGurley : 9500,
+  DevontaFreeman : 8500,
+  FrankGore : 7000,
+  MattForte : 7500,
+  ArianFoster : 8000
+};
 
 var WR ={};
 
@@ -40,7 +49,7 @@ var DEF = {};
 
 // randomQuarterBack(QBs);
 
-function randomQuarterbackTwo(QBs) {
+function randomQuarterback(QBs) {
 
   var QB = [];
 
@@ -54,10 +63,63 @@ function randomQuarterbackTwo(QBs) {
     var objKey = arrayOfAllKeys[rnd];
 
     QB.push(objKey, QBs[objKey]);
-    // console.log(QB);
+    console.log(QB);
+    Roster.push(QB);
+    console.log(Roster);
   }
   return QB;
 };
 
+randomQuarterback(QBs);
 
-randomQuarterbackTwo(QBs);
+function randomRunningbackOne(RBs) {
+
+  RB1 = [];
+
+  var arrayOfAllKeys = Object.keys(RBs);
+  // console.log(arrayOfAllKeys);
+
+  for(var i=0; i<1; i++){
+
+    var rnd = Math.floor(Math.random()*arrayOfAllKeys.length);
+
+    var objKey = arrayOfAllKeys[rnd];
+
+    RB1.push(objKey, RBs[objKey]);
+    // console.log(RB2);
+    Roster.push(RB1);
+    console.log(Roster);
+  }
+  return RB1;
+
+}
+
+randomRunningbackOne(RBs);
+
+function randomRunningbackTwo(RBs) {
+
+  RB2 = [];
+
+  var arrayOfAllKeys = Object.keys(RBs);
+  // console.log(arrayOfAllKeys);
+
+  for(var i=0; i<1; i++){
+
+    var rnd = Math.floor(Math.random()*arrayOfAllKeys.length);
+
+    var objKey = arrayOfAllKeys[rnd];
+
+    RB2.push(objKey, RBs[objKey]);
+    // console.log(RB2);
+    Roster.push(RB2);
+    console.log(Roster);
+  }
+  return RB2;
+
+}
+
+randomRunningbackTwo(RBs);
+
+
+
+
