@@ -133,6 +133,7 @@ function randomQuarterback(QBs) {
   // return QB;
 };
 
+randomQuarterback(QBs);
 
 function randomRunningbackOne(RBs) {
 
@@ -155,6 +156,7 @@ function randomRunningbackOne(RBs) {
 
 }
 
+randomRunningbackOne(RBs);
 
 function randomRunningbackTwo(RBs) {
 
@@ -177,6 +179,7 @@ function randomRunningbackTwo(RBs) {
 
 }
 
+randomRunningbackTwo(RBs);
 
 function randomWideoutOne(WRs) {
 
@@ -199,7 +202,7 @@ function randomWideoutOne(WRs) {
 
 }
 
-
+randomWideoutOne(WRs);
 
 
 function randomWideoutTwo(WRs) {
@@ -223,6 +226,7 @@ function randomWideoutTwo(WRs) {
 
 }
 
+randomWideoutTwo(WRs);
 
 
 function randomWideoutThree(WRs) {
@@ -246,7 +250,7 @@ function randomWideoutThree(WRs) {
 
 }
 
-
+randomWideoutThree(WRs);
 
 function randomTEone(TEs) {
 
@@ -269,7 +273,7 @@ function randomTEone(TEs) {
 
 }
 
-
+randomTEone(TEs);
 
 
 function randomKicker(Ks) {
@@ -293,7 +297,7 @@ function randomKicker(Ks) {
 
 }
 
-
+randomKicker(Ks);
 
 
 function randomDEF(DEFs) {
@@ -317,21 +321,7 @@ function randomDEF(DEFs) {
 
 }
 
-function rosterConstruction() {
-  randomQuarterback(QBs);
-  randomRunningbackOne(RBs);
-  randomRunningbackTwo(RBs);
-  randomWideoutOne(WRs);
-  randomWideoutTwo(WRs);
-  randomWideoutThree(WRs);
-  randomTEone(TEs);
-  randomKicker(Ks);
-  randomDEF(DEFs);
-
-}
-rosterConstruction();
-console.log(Roster);
-
+randomDEF(DEFs);
 
 function eliminateDuplicates(roster) {
 
@@ -352,23 +342,32 @@ function eliminateDuplicates(roster) {
   // console.log(finalRoster);
   // console.log(finalRoster);
   // console.log(finalRoster);
-  // return finalRoster;
+  return finalRoster;
 };
 
 eliminateDuplicates(Roster);
 // console.log(noDuplicates);
-// console.log(finalRoster);
+console.log(Roster);
 
   while(finalRoster.length < 9) {
     Roster = [];
-    console.log(Roster);
-    rosterConstruction();
-    console.log(Roster);
-    eliminateDuplicates(Roster);
-    console.log(eliminateDuplicates);
+    randomQuarterback(QBs);
+    randomRunningbackOne(RBs);
+    randomRunningbackTwo(RBs);
+    randomWideoutOne(WRs);
+    randomWideoutTwo(WRs);
+    randomWideoutThree(WRs);
+    randomTEone(TEs);
+    randomKicker(Ks);
+    randomDEF(DEFs);
+    eliminateDuplicates();
+    console.log(finalRoster);
 
   }
-  // console.log(finalRoster);
+  console.log(finalRoster);
+
+
+console.log(Roster);
 
 // var
 

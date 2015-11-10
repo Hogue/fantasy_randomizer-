@@ -327,10 +327,10 @@ function rosterConstruction() {
   randomTEone(TEs);
   randomKicker(Ks);
   randomDEF(DEFs);
+  console.log(Roster);
 
 }
-rosterConstruction();
-console.log(Roster);
+
 
 
 function eliminateDuplicates(roster) {
@@ -352,23 +352,32 @@ function eliminateDuplicates(roster) {
   // console.log(finalRoster);
   // console.log(finalRoster);
   // console.log(finalRoster);
-  // return finalRoster;
+  return finalRoster;
 };
 
 eliminateDuplicates(Roster);
 // console.log(noDuplicates);
-// console.log(finalRoster);
+console.log(Roster);
 
   while(finalRoster.length < 9) {
     Roster = [];
-    console.log(Roster);
-    rosterConstruction();
-    console.log(Roster);
-    eliminateDuplicates(Roster);
-    console.log(eliminateDuplicates);
+    randomQuarterback(QBs);
+    randomRunningbackOne(RBs);
+    randomRunningbackTwo(RBs);
+    randomWideoutOne(WRs);
+    randomWideoutTwo(WRs);
+    randomWideoutThree(WRs);
+    randomTEone(TEs);
+    randomKicker(Ks);
+    randomDEF(DEFs);
+    eliminateDuplicates();
+    console.log(finalRoster);
 
   }
-  // console.log(finalRoster);
+  console.log(finalRoster);
+
+
+console.log(Roster);
 
 // var
 
