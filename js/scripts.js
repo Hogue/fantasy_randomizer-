@@ -128,7 +128,6 @@ function randomQuarterback(QBs) {
     var objKey = arrayOfAllKeys[rnd];
 
     QB.push(objKey, QBs[objKey]);
-    console.log(QB);
     Roster.push(QB);
   }
   return QB;
@@ -338,10 +337,32 @@ function eliminateDuplicates(roster) {
     finalRoster.push(i);
 
   }
-  console.log(finalRoster);
-  return finalRoster;
-}
+  if(finalRoster.length === 8) {
+    return finalRoster;
+  } else {
+      Roster = [];
+      finalRoster = [];
+      randomQuarterback(QBs);
+      randomRunningbackOne(RBs);
+      randomRunningbackTwo(RBs);
+      randomWideoutOne(WRs);
+      randomWideoutTwo(WRs);
+      randomWideoutThree(WRs);
+      randomTEone(TEs);
+      randomKicker(Ks);
+      randomDEF(DEFs);
+      // console.log(Roster);
+      // console.log(finalRoster);
+      return finalRoster;
+
+  }
+  // console.log(finalRoster);
+  // return finalRoster;
+};
 // console.log(Roster);
-eliminateDuplicates(Roster);
+
+var rRoster = eliminateDuplicates(Roster);
+
+console.log(rRoster);
 
 
