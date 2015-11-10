@@ -96,24 +96,6 @@ var DEFs = {
   BaltimoreRavens : 4400
 };
 
-// function randomQuarterBack(QBs) {
-//   var QB = [];
-//   var keys = Object.keys(QBs),
-//     length = keys.length;
-//     console.log(length);
-//     console.log(keys);
-//   var i;
-//   for (i = 0; i < 1; i++) {
-//     QB.push(QBs[keys[Math.floor(Math.random() * length)]]);
-//     console.log(QB);
-//     console.log();
-
-// }
-// return QB;
-// }
-
-// randomQuarterBack(QBs);
-
 function randomQuarterback(QBs) {
 
   var QB = [];
@@ -130,7 +112,6 @@ function randomQuarterback(QBs) {
     QB.push(objKey, QBs[objKey]);
     Roster.push(QB);
   }
-  // return QB;
 };
 
 
@@ -139,7 +120,6 @@ function randomRunningbackOne(RBs) {
   RB1 = [];
 
   var arrayOfAllKeys = Object.keys(RBs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -148,11 +128,8 @@ function randomRunningbackOne(RBs) {
     var objKey = arrayOfAllKeys[rnd];
 
     RB1.push(objKey, RBs[objKey]);
-    // console.log(RB2);
     Roster.push(RB1);
   }
-  // return RB1;
-
 }
 
 
@@ -161,7 +138,6 @@ function randomRunningbackTwo(RBs) {
   RB2 = [];
 
   var arrayOfAllKeys = Object.keys(RBs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -170,11 +146,8 @@ function randomRunningbackTwo(RBs) {
     var objKey = arrayOfAllKeys[rnd];
 
     RB2.push(objKey, RBs[objKey]);
-    // console.log(RB2);
     Roster.push(RB2);
   }
-  // return RB2;
-
 }
 
 
@@ -183,7 +156,6 @@ function randomWideoutOne(WRs) {
   WR1 = [];
 
   var arrayOfAllKeys = Object.keys(WRs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -192,11 +164,8 @@ function randomWideoutOne(WRs) {
     var objKey = arrayOfAllKeys[rnd];
 
     WR1.push(objKey, WRs[objKey]);
-    // console.log(RB2);
     Roster.push(WR1);
   }
-  // return WR1;
-
 }
 
 
@@ -207,7 +176,6 @@ function randomWideoutTwo(WRs) {
   WR2 = [];
 
   var arrayOfAllKeys = Object.keys(WRs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -216,11 +184,8 @@ function randomWideoutTwo(WRs) {
     var objKey = arrayOfAllKeys[rnd];
 
     WR2.push(objKey, WRs[objKey]);
-    // console.log(RB2);
     Roster.push(WR2);
   }
-  // return WR2;
-
 }
 
 
@@ -230,7 +195,6 @@ function randomWideoutThree(WRs) {
   WR3 = [];
 
   var arrayOfAllKeys = Object.keys(WRs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -239,11 +203,8 @@ function randomWideoutThree(WRs) {
     var objKey = arrayOfAllKeys[rnd];
 
     WR3.push(objKey, WRs[objKey]);
-    // console.log(RB2);
     Roster.push(WR3);
   }
-  // return WR3;
-
 }
 
 
@@ -253,7 +214,6 @@ function randomTEone(TEs) {
   TE1 = [];
 
   var arrayOfAllKeys = Object.keys(TEs);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -262,11 +222,8 @@ function randomTEone(TEs) {
     var objKey = arrayOfAllKeys[rnd];
 
     TE1.push(objKey, TEs[objKey]);
-    // console.log(RB2);
     Roster.push(TE1);
   }
-  // return TE1;
-
 }
 
 
@@ -277,7 +234,6 @@ function randomKicker(Ks) {
   K1 = [];
 
   var arrayOfAllKeys = Object.keys(Ks);
-  // console.log(arrayOfAllKeys);
 
   for(var i=0; i<1; i++){
 
@@ -286,11 +242,8 @@ function randomKicker(Ks) {
     var objKey = arrayOfAllKeys[rnd];
 
     K1.push(objKey, Ks[objKey]);
-    // console.log(RB2);
     Roster.push(K1);
   }
-  // return K1;
-
 }
 
 
@@ -310,11 +263,8 @@ function randomDEF(DEFs) {
     var objKey = arrayOfAllKeys[rnd];
 
     DEF1.push(objKey, DEFs[objKey]);
-    // console.log(RB2);
     Roster.push(DEF1);
   }
-  // return DEF1;
-
 }
 
 function rosterConstruction() {
@@ -327,7 +277,6 @@ function rosterConstruction() {
   randomTEone(TEs);
   randomKicker(Ks);
   randomDEF(DEFs);
-
 }
 rosterConstruction();
 console.log(Roster);
@@ -346,18 +295,11 @@ function eliminateDuplicates(roster) {
   }
   for (i in obj) {
     finalRoster.push(i);
-    // console.log(finalRoster);
-    // return finalRoster;
   }
-  // console.log(finalRoster);
-  // console.log(finalRoster);
-  // console.log(finalRoster);
-  // return finalRoster;
 };
 
 eliminateDuplicates(Roster);
-// console.log(noDuplicates);
-// console.log(finalRoster);
+
 
   while(finalRoster.length < 9) {
     Roster = [];
@@ -368,32 +310,6 @@ eliminateDuplicates(Roster);
     console.log(eliminateDuplicates);
 
   }
-  // console.log(finalRoster);
 
-// var
-
-// var rRoster = eliminateDuplicates(Roster);
-
-// console.log(rRoster);
-
-
-
-
-
-
-
-
-      // Roster = [];
-      // randomQuarterback(QBs);
-      // randomRunningbackOne(RBs);
-      // randomRunningbackTwo(RBs);
-      // randomWideoutOne(WRs);
-      // randomWideoutTwo(WRs);
-      // randomWideoutThree(WRs);
-      // randomTEone(TEs);
-      // randomKicker(Ks);
-      // randomDEF(DEFs);
-      // console.log(Roster);
-      // return Roster;
 
 
