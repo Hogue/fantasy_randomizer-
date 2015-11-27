@@ -321,19 +321,20 @@ console.log(totalSalary);
 //////////////////////////////////////////////////
 
 function doubleCheck(currentRoster, currentSalary) {
-  while(currentRoster.length < 9 && currentSalary < 60000) {
+  while(currentRoster.length < 9 || currentSalary > SalaryCap) {
     Roster = [];
-    console.log(Roster);
     rosterConstruction();
+    currentRoster = Roster;
+
+    currentSalary = salaryCheck(Roster);
+
     console.log(Roster);
-    salaryCheck(Roster);
-    console.log(Roster);
+    console.log(currentSalary);
   }
-  // return Roster;
+  return Roster;
 };
 doubleCheck(Roster, totalSalary);
 console.log(Roster);
-console.log(totalSalary);
 
 //////////////////////////////////////////////////
                 // Duplicates Filer
